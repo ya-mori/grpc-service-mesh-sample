@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "grpc-client"
+version = "0.1.0"
+description = ""
+authors = ["ya-mori <ppap.yohei.moriya@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.8.*"
+tritonclient = {version = "2.36.0", extras = ["grpc"]}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
