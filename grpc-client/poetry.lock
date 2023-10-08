@@ -214,6 +214,17 @@ files = [
 ]
 
 [[package]]
+name = "schedule"
+version = "1.2.1"
+description = "Job scheduling for humans."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "schedule-1.2.1-py2.py3-none-any.whl", hash = "sha256:14cdeb083a596aa1de6dc77639a1b2ac8bf6eaafa82b1c9279d3612823063d01"},
+    {file = "schedule-1.2.1.tar.gz", hash = "sha256:843bc0538b99c93f02b8b50e3e39886c06f2d003b24f48e1aa4cadfa3f341279"},
+]
+
+[[package]]
 name = "tritonclient"
 version = "2.36.0"
 description = "Python client library and utilities for communicating with Triton Inference Server"
@@ -239,4 +250,4 @@ http = ["aiohttp (>=3.8.1,<4.0.0)", "geventhttpclient (>=1.4.4,<=2.0.2)", "numpy
 [metadata]
 lock-version = "2.0"
 python-versions = "3.8.*"
-content-hash = "c47c3d68cc752f6eed9bcb527764850a1bba18c4d613efb634f9351d37154646"
+content-hash = "71709b6e4f49030cb26da84fa74abc89ba69f50026f93c405219282afc77b40d"
