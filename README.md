@@ -1,5 +1,1 @@
-
-
-```shell
-
-```# grpc-service-mesh-sample
+# grpc-service-mesh-sample
