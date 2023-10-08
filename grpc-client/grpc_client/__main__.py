@@ -39,20 +39,17 @@ def main():
             InferRequestedOutput('OUTPUT0'),
             InferRequestedOutput('OUTPUT1'),
         ]
-        try:
-            response = client.infer(
-                model_name='sample_model',
-                inputs=inputs,
-                # request_id=str(1),
-                outputs=outputs
-            )
-            # print(response.get_response())
-            print(response.get_output("OUTPUT0"))
-            print(response.get_output("OUTPUT1"))
-            print(response.as_numpy("OUTPUT0"))
-            print(response.as_numpy("OUTPUT1"))
-        except Exception as e:
-            print(e)
+        response = client.infer(
+            model_name='sample_model',
+            inputs=inputs,
+            # request_id=str(1),
+            outputs=outputs
+        )
+        # print(response.get_response())
+        print(response.get_output("OUTPUT0"))
+        print(response.get_output("OUTPUT1"))
+        print(response.as_numpy("OUTPUT0"))
+        print(response.as_numpy("OUTPUT1"))
 
 
 if __name__ == '__main__':
