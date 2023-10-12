@@ -40,6 +40,5 @@ sh bin/build.sh
 ## Deploy to GKE
 
 ```bash
-kubectl apply -k k8s/overlays/prd/grpc_client
-kubectl apply -k k8s/overlays/prd/grpc_server
+sh bin/deploy.sh
 ```

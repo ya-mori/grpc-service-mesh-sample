@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-client-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-client-deploy
+  template:
+    metadata:
+      labels:
+        app: grpc-client-deploy
+    spec:
+      containers:
+      - name: grpc-client-container
+        image: grpc-service-mesh-sample/grpc-client:tag
+        env:
+        - name: GRPC_SERVER_HOST
+          value: grpc-server-svc
+        - name: GRPC_SERVER_PORT
+          value: "8001"
+        imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 5

@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- ../../base
+
+patchesStrategicMerge:
+- grpc_client/deployment-patch.yaml
+- grpc_server/deployment-patch.yaml
+
+images:
+- name: grpc-service-mesh-sample/grpc-client
+  newName: asia-northeast1-docker.pkg.dev/<project-id>/grpc-service-mesh-sample/grpc-client
+  newTag: latest
+- name: grpc-service-mesh-sample/grpc-server
+  newName: asia-northeast1-docker.pkg.dev/<project-id>/grpc-service-mesh-sample/grpc-server
+  newTag: latest

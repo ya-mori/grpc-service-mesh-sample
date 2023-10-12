@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-server-deploy
+spec:
+  template:
+    spec:
+      containers:
+      - name: grpc-server-container
+        resources:
+          limits:
+            cpu: 1024m
+            memory: 1024Mi
+          requests:
+            cpu: 512m
+            memory: 512Mi

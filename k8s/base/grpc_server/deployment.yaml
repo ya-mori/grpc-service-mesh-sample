@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-server-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grpc-server-deploy
+  template:
+    metadata:
+      labels:
+        app: grpc-server-deploy
+    spec:
+      containers:
+      - name: grpc-server-container
+        image: grpc-service-mesh-sample/grpc-server:tag
+        imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 5
