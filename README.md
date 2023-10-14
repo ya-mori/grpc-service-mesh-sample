@@ -1,16 +1,13 @@
 # grpc-service-mesh-sample
 
 ## Overview
-
 This is a sample project to demonstrate how to use [gRPC](https://grpc.io/) with [Anthos](https://cloud.google.com/anthos/service-mesh) as a service mesh.
 
 
 # Setup
 
 ## Setup GKE Cluster
-
 ref: https://cloud.google.com/service-mesh/docs/prepare-app-for-anthos-service-mesh#create_a_cluster
-
 
 ## Setup command line
 ```bash
@@ -25,7 +22,6 @@ gcloud container clusters get-credentials <cluster-name> --project <project-id> 
 # Build and Deploy
 
 ## Deploy to GKE
-
 ```bash
 kubectl config use-context gke_<project-id>_<region>_<cluster-name>
 sh bin/build.sh
