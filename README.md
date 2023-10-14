@@ -24,21 +24,11 @@ gcloud container clusters get-credentials <cluster-name> --project <project-id> 
 
 # Build and Deploy
 
-## Build and push docker image
-
-```bash
-cd grpc-client
-sh bin/build.sh
-```
-
-```bash
-cd grpc-server
-sh bin/build.sh
-```
-
-
 ## Deploy to GKE
 
 ```bash
+kubectl config use-context gke_<project-id>_<region>_<cluster-name>
+sh bin/build.sh
 sh bin/deploy.sh
+kubectl apply -k k8s/overlays/prd
 ```
