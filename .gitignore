@@ -1,3 +1,5 @@
 .idea/
 __pycache__/
 .venv/
+.terraform
+.terraform.lock.hcl
